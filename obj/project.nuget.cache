@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "YJhAsuaAPOo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gökhan Ulutas\\Downloads\\asp-dot-net-core-6-ef-core-building-data-driven-application\\Assets\\Module 2\\Starter\\BethanysPieShopAdmin\\BethanysPieShopAdmin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gökhan Ulutas\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.14\\microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\Gökhan Ulutas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.14\\microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\Gökhan Ulutas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.14\\microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\Gökhan Ulutas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.14\\microsoft.netcore.app.host.win-x64.8.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

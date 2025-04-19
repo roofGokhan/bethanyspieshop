@@ -18,9 +18,3 @@ public class CategoryRepository(BethanysPieShopDbContext context) : ICategoryRep
                .FirstOrDefaultAsync(c => c.CategoryId == id);
      }
 }
-
-public interface ICategoryRepository
-{
-     Task<IEnumerable<Category>> GetCategoriesAsync();
-     Task<Category?> GetCategoryAsync(int? id);
-}

@@ -6,7 +6,7 @@ public class PieRepository(BethanysPieShopDbContext context) : IPieRepository
 {
     public async Task<List<Pie>> GetPiesAsync()
     {
-        return await context.Pies.ToListAsync();
+        return await context.Pies.OrderBy(a=>a.PieId).ToListAsync();
     }
 
     public async Task<Pie?> GetPieAsync(int? id)
@@ -14,6 +14,6 @@ public class PieRepository(BethanysPieShopDbContext context) : IPieRepository
         return await context.Pies
             .Include(a => a.Category)
             .Include(v => v.Ingredients)
-            .FirstOrDefaultAsync();
+            .FirstOrDefaultAsync(a=> a.PieId == id);
     }
 }

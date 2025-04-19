@@ -20,5 +20,26 @@ public class CategoryController : Controller
         };
         return View(model);
     }
+    
+    public async Task<IActionResult> Details(int? id)
+    {
+        var category = await _categoryRepository.GetCategoryAsync(id);
+        if (id == null)
+        {
+            return NotFound();
+        }
+        if (category == null)
+        {
+            return NotFound();
+        }
+        CategoryListViewModel model = new()
+        {
+            Categories = (await _categoryRepository.GetCategoriesAsync()).ToList(),
+            Category = category
+        };
+        return View(model.Category);
+        
+        
+    }
 }
 

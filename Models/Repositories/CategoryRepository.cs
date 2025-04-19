@@ -10,9 +10,17 @@ public class CategoryRepository(BethanysPieShopDbContext context) : ICategoryRep
                 .Include(c => c.Pies)
                 .ToListAsync();
           }
+
+     public async Task<Category?> GetCategoryAsync(int? id)
+     {
+          return await context.Categories
+               .Include(c => c.Pies)
+               .FirstOrDefaultAsync(c => c.CategoryId == id);
+     }
 }
 
 public interface ICategoryRepository
 {
      Task<IEnumerable<Category>> GetCategoriesAsync();
+     Task<Category?> GetCategoryAsync(int? id);
 }

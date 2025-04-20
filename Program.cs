@@ -1,4 +1,3 @@
-
 using BethanysPieShopAdmin.Models;
 using BethanysPieShopAdmin.Models.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -45,7 +44,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    "default",
+    "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

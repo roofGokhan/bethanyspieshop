@@ -1,10 +1,12 @@
-﻿@model IEnumerable<BethanysPieShopAdmin.Models.Pie>
+﻿@model IEnumerable<Pie>
 
 <h2>Pies</h2>
 <hr/>
 @if (!Model.Any())
 {
-    <tr><td colspan="3" class="text-center">No pies at this point</td></tr>
+    <tr>
+        <td colspan="3" class="text-center">No pies at this point</td>
+    </tr>
 }
 else
 {

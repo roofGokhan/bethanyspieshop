@@ -1,7 +1,7 @@
 ﻿@model OrderIndexViewModel
 
 <h2>Orders</h2>
-<hr />
+<hr/>
 
 <table class="table table-condensed table-bordered">
     <tr>
@@ -12,7 +12,7 @@
     </tr>
     @foreach (var item in Model.Orders)
     {
-        string selectedRow = "";
+        var selectedRow = "";
 
         if (item.OrderId == Model.SelectedOrderId)
         {
@@ -49,11 +49,12 @@
 
         @foreach (var item in Model.OrderDetails)
         {
-            string selectedRow = "";
+            var selectedRow = "";
             if (item.OrderDetailId == Model.SelectedOrderDetailId)
             {
                 selectedRow = "success";
             }
+
             <tr class="@selectedRow">
 
                 <td>
@@ -63,7 +64,8 @@
                     @item.Price
                 </td>
                 <td>
-                    <a asp-action="Index" asp-route-orderId="@item.OrderId" asp-route-orderDetailId="@item.OrderDetailId">Select</a>
+                    <a asp-action="Index" asp-route-orderId="@item.OrderId"
+                       asp-route-orderDetailId="@item.OrderDetailId">Select</a>
                 </td>
             </tr>
         }

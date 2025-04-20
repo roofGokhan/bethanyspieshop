@@ -1,7 +1,7 @@
 ﻿@model Pie
 
 <h2>Details for @Model.Name</h2>
-<hr />
+<hr/>
 
 <div>
     <dl class="row">
@@ -75,28 +75,28 @@
                     {
                         <tr>
                             <td>
-                            @ingredient.Name
-                        </td>
-                        <td>
-                            @ingredient.Amount
-                        </td>
-                    </tr>
-                }
-            </table>
-        </dd>
+                                @ingredient.Name
+                            </td>
+                            <td>
+                                @ingredient.Amount
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </dd>
         }
 
         <dt class="col-sm-2">
             <label asp-for="ImageThumbnailUrl"></label>
         </dt>
         <dd class="col-sm-10">
-            <img src="@Model.ImageThumbnailUrl" width="300" height="150"  />
+            <img src="@Model.ImageThumbnailUrl" width="300" height="150"/>
         </dd>
         <dt class="col-sm-2">
             <label asp-for="ImageUrl"></label>
         </dt>
         <dd class="col-sm-10">
-            <img src="@Model.ImageUrl" width="300" height="150" />
+            <img src="@Model.ImageUrl" width="300" height="150"/>
 
         </dd>
     </dl>

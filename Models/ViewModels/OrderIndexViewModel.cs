@@ -7,4 +7,4 @@ public class OrderIndexViewModel
     public IEnumerable<Pie>? Pies { get; set; }
     public int? SelectedOrderId { get; set; }
     public int? SelectedOrderDetailId { get; set; }
-} 
+}

@@ -1,7 +1,7 @@
 ﻿@model Category
 
 <h2>Details for category @Model.Name</h2>
-<hr />
+<hr/>
 
 <div>
     <dl class="row">
@@ -30,9 +30,9 @@
             @Model.DateAdded.Value.ToShortDateString()
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model=>model.Pies)
+            @Html.DisplayNameFor(model => model.Pies)
         </dt>
-        <dd class="table">
+        <table class="table">
             <tr>
                 <th>Pie Name</th>
                 <th>Price</th>
@@ -48,6 +48,6 @@
                     </td>
                 </tr>
             }
-        </dd>
+        </table>
     </dl>
 </div>

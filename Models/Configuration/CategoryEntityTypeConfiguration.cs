@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BethanysPieShopAdmin.Models.Configuration;
 
-public class CategoryEntityTypeConfiguration:IEntityTypeConfiguration<Category>
+public class CategoryEntityTypeConfiguration : IEntityTypeConfiguration<Category>
 {
     public void Configure(EntityTypeBuilder<Category> builder)
     {

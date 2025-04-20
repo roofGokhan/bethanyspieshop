@@ -6,15 +6,12 @@ public class OrderRepository(BethanysPieShopDbContext context) : IOrderRepositor
 {
     public async Task<Order?> GetOrderDetailsAsync(int? orderId)
     {
-        if (orderId == null)
-        {
-            return null;
-        }
+        if (orderId == null) return null;
         return await context.Orders
             .Include(a => a.OrderDetails)
             .ThenInclude(a => a.Pie)
             .OrderBy(a => a.OrderId)
-            .Where(a=> a.OrderId == orderId.Value)
+            .Where(a => a.OrderId == orderId.Value)
             .FirstOrDefaultAsync();
     }
 
